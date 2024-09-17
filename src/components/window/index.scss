@@ -1,0 +1,44 @@
+.windowComponent {
+    border-radius: 0.1rem;
+    background-color: white;
+    color: black;
+
+    .windowTop {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        background-color: rgb(202, 195, 195);
+        padding: 0.2rem 0.7rem;
+
+        .dotsContainer {
+            grid-column: 1;
+            display: flex;
+            gap: 0.4rem;
+
+            .dot {
+                width: 0.7rem;
+                height: 0.7rem;
+                border-radius: 100%;
+
+                &.red {
+                    background-color: red;
+                }
+
+                &.green {
+                    background-color: green;
+                }
+
+                &.orange {
+                    background-color: orange;
+                }
+            }
+        }
+
+        .title {
+            grid-column: 2;
+            justify-self: center;
+            font-size: 1.1rem;
+            color: black;
+        }
+    }
+}

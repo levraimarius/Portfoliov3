@@ -1,8 +1,13 @@
 import './Computer.scss'
 
-export default function Computer() {
+type ComputerProps = {
+    clickEvent: () => void
+    isComputerOpen: boolean
+}
+
+export default function Computer({ clickEvent, isComputerOpen }: ComputerProps) {
     return (
-        <div className='computerComponent'>
+        <div className={`computerComponent ${isComputerOpen ? 'isComputerOpen' : ''}`} onClick={clickEvent}>
             <div className='screenContainer'>
                 <div className='screen'></div>
                 <div className='reflectionsContainer'>
