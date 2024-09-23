@@ -1,12 +1,15 @@
 import Folder from '../components/folder/Folder'
 
-export default function DesktopHomepage() {
+type DesktopHomepageProps = {
+    clickEvent: (value: string) => void
+}
+
+export default function DesktopHomepage({ clickEvent }: DesktopHomepageProps) {
     return (
         <div className='desktopHomepage'>
-            <Folder title='Mon expérience' />
-            <Folder title='Mes projets' />
-            <Folder title='Mes technos' />
-            <Folder title='Mon CV' />
+            <Folder title='Mon expérience' clickEvent={() => clickEvent('experience')} />
+            <Folder title='Mes projets' clickEvent={() => clickEvent('projects')} />
+            <Folder title='Mes technos' clickEvent={() => clickEvent('technologies')} />
         </div>
     )
 }

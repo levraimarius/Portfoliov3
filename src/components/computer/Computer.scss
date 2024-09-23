@@ -8,11 +8,10 @@
     height: 300px;
 
     &.isComputerOpen {
-        width: 100vw;
-        height: calc(100vh - 20px);
-        left: 0;
+        width: 80vw;
+        height: calc(90vh - 20px);
+        left: 10vw;
         bottom: 20px;
-        background-color: rgba(22, 20, 20, 0.5);
 
         transform-origin: center;
         transition: all 0.3s ease;
